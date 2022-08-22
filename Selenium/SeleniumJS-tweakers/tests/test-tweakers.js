@@ -1,4 +1,4 @@
-const { By, Key, Builder } = require('selenium-webdriver')
+const { By, Builder } = require('selenium-webdriver')
 
 async function example() {
   //To wait for browser to build and launch properly
