@@ -6,6 +6,7 @@ How to install and run:
 --
 
 a) install WebDriverIO:
+* npm init -y
 * npm install --save-dev @wdio/cli
 * npx wdio config -y
 
