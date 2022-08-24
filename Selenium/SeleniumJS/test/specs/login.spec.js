@@ -14,6 +14,5 @@ describe('My Login application', () => {
   it('I enter valid username and password and login successfully', async () => {
     await LoginPage.open()
     await LoginPage.login('Admin', 'admin123')
-    await assert.equal(true, await HomePage.isDashboardHeaderExist())
   })
 })

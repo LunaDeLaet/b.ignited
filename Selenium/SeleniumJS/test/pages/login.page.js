@@ -6,13 +6,13 @@ class LoginPage extends Page {
   //page locators:
 
   get inputUsername() {
-    return $('#txtUsername')
+    return $('[name="username"]')
   }
   get inputPassword() {
-    return $('#txtPassword')
+    return $('[name="password"]')
   }
   get loginBtn() {
-    return $('#btnLogin')
+    return $('button=Login')
   }
 
   //page actions:
