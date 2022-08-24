@@ -5,7 +5,7 @@ Introduction to Page Object Model in Selenium through tutorial (https://www.lamb
 How to install and run:
 --
 
-a) install WebDriverIO:
+a) how to start WebDriverIO project with Project Object pattern:
 * npm init -y
 * npm install --save-dev @wdio/cli
 * npx wdio config -y
