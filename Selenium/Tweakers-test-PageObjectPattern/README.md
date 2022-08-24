@@ -10,6 +10,9 @@ a) how to start WebDriverIO project with Project Object pattern:
 * npm install --save-dev @wdio/cli
 * npx wdio config -y
 
+b) install my project:
+* download and unzip
+* npm install
 
-b) run the test in the tutorial:
+c) run the test:
 * npx wdio wdio.conf.js
