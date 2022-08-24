@@ -7,4 +7,4 @@ This folder contains the following (in chronological order):
 - Docker Tutorial: project following Docker's 101 tutorial (https://www.docker.com/101-tutorial/) 
 4) SDLC cursus: Software Development Life Cycle course
 5) Selenium 
-- SeleniumJS-tweakers: project 'cypress-tweakers' reproduced in Selenium in JavaScript
+- SeleniumJS-tweakers: project 'cypress-tweakers' reproduced in Selenium in JavaScript to introduce me to Selenium
