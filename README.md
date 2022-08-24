@@ -11,3 +11,5 @@ This folder contains the following (in chronological order):
 5. Selenium 
 
     - SeleniumJS-tweakers: project 'cypress-tweakers' reproduced in Selenium in JavaScript to introduce me to Selenium
+    - WebDriverIO Page Object Model Tutorial
+    - Tweakers Page Object Model Test: same project as 'cypress-tweakers' and 'SeleniumJS-tweakers' but reproduced in WebDriverIO with the Page Object model
