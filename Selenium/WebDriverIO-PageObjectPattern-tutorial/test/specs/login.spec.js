@@ -2,7 +2,6 @@
 
 const assert = require('assert')
 const LoginPage = require('../pages/login.page')
-const HomePage = require('../pages/home.page')
 
 describe('My Login application', () => {
   it('I should open the main URL and verify the title', async () => {

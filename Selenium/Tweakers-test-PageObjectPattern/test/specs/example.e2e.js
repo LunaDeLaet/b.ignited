@@ -1,15 +1,19 @@
-const LoginPage = require('../pageobjects/login.page');
-const SecurePage = require('../pageobjects/secure.page');
+const articlePage = require('../pages/article.page')
+const homePage = require('../pages/home.page')
 
-describe('My Login application', () => {
-    it('should login with valid credentials', async () => {
-        await LoginPage.open();
+describe('tweakers test', () => {
+  it("click yesterday's last article and check name and date not empty", async () => {
+    // open tweakers
+    await browser.url('')
 
-        await LoginPage.login('tomsmith', 'SuperSecretPassword!');
-        await expect(SecurePage.flashAlert).toBeExisting();
-        await expect(SecurePage.flashAlert).toHaveTextContaining(
-            'You logged into a secure area!');
-    });
-});
+    //click yesterday's last article
+    await homePage.lastArticleYesterday.waitForDisplayed()
+    await homePage.lastArticleYesterday.scrollIntoView()
+    await homePage.lastArticleYesterday.click()
 
-
+    // check name not empty
+    await expect(articlePage.name).toExist()
+    // check date not empty
+    await expect(articlePage.date).toExist()
+  })
+})
