@@ -1,13 +1,7 @@
 {
-  "dependencies": {
-    "selenium-webdriver": "^4.4.0"
-  },
-  "name": "seleniumjs",
+  "name": "pageobjectpattern-tutorial",
   "version": "1.0.0",
   "main": "index.js",
-  "directories": {
-    "test": "tests"
-  },
   "devDependencies": {
     "@wdio/cli": "^7.23.0",
     "@wdio/local-runner": "^7.23.0",
