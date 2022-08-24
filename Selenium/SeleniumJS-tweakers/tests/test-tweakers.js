@@ -1,19 +1,21 @@
 const { By, Builder } = require('selenium-webdriver')
 
 async function example() {
-  //To wait for browser to build and launch properly
+  // wait for browser to build and launch properly
   let driver = await new Builder().forBrowser('chrome').build()
 
-  //To fetch https://tweakers.net/ from the browser with our code.
+  // fetch https://tweakers.net/ from the browser
   await driver.get('https://tweakers.net/')
 
+  // find the first header of yesterday
   element = driver.findElement(
     By.xpath(
       "(//table[contains(@class, 'headlines')])[2]//td[contains(@class, 'title')]//a"
     )
   )
-
   await driver.executeScript('arguments[0].click();', element)
+  
+  // check name not empty
   await driver
     .findElement(
       By.xpath("//p[contains(@class, 'name')][string-length(text()) > 0]")
@@ -31,7 +33,7 @@ async function example() {
       }
     )
 
-  // check name and date not empty
+  // check date not empty
   await driver
     .findElement(
       By.xpath(
@@ -51,7 +53,7 @@ async function example() {
       }
     )
 
-  //It is always a safe practice to quit the browser after execution
+  // always a safe practice to quit the browser after execution
   await driver.quit()
 }
 
