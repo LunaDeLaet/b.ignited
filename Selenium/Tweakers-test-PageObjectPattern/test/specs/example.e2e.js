@@ -6,9 +6,9 @@ describe('tweakers test', () => {
     // open tweakers
     await browser.url('')
 
-    //click yesterday's last article
-    await homePage.lastArticleYesterday.waitForDisplayed()
+    // scroll to yesterday's last article and center it in screen
     await homePage.lastArticleYesterday.scrollIntoView({ block: 'center' })
+    // click yesterday's last article
     await homePage.lastArticleYesterday.click()
 
     // check name not empty
