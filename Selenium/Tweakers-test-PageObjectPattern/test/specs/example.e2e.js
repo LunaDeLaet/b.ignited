@@ -8,7 +8,7 @@ describe('tweakers test', () => {
 
     //click yesterday's last article
     await homePage.lastArticleYesterday.waitForDisplayed()
-    await homePage.lastArticleYesterday.scrollIntoView()
+    await homePage.lastArticleYesterday.scrollIntoView({ block: 'center' })
     await homePage.lastArticleYesterday.click()
 
     // check name not empty
