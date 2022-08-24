@@ -1,6 +1,6 @@
 # WebDriverIO - Page Object Model - Tweakers Test
 
-Same test as previous test in Cypress and SeleniumJS, but now with Page Object Model
+Same test as previous test in Cypress and SeleniumJS, but now with Page Object Model in WebDriverIO
 
 How to install and run:
 --
