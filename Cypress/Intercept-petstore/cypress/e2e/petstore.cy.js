@@ -8,17 +8,21 @@ describe('intercept petstore with cypress', () => {
     cy.get("[id='operations-pet-findPetsByStatus']").click()
     cy.get('button[class="btn try-out__btn"').click()
     cy.get('td[class="parameters-col_description"] select').select('available')
-    cy.intercept('GET', '/v2/pet/findByStatus?status=available', {
-      name: 'doggie',
-    }).as('pet')
+    cy.intercept('GET', '/v2/pet/findByStatus?status=available').as('pet')
     cy.get('button[class="btn execute opblock-control__btn"').click()
 
     // spy
     cy.wait('@pet').then((interception) => {
       // log response data
-      cy.log(JSON.stringify(interception.response.body))
+      cy.log(interception)
       console.log(interception)
     })
+
+    // validate response in ui to contain text "name": "Guru"
+    cy.get('code[class="language-json"]')
+      .eq(0)
+      .invoke('text')
+      .should('contain', '"name": "Guru"')
   })
 
   it('mocking with intercept test with dynamic fixture', () => {
