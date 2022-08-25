@@ -1,12 +1,13 @@
 /// <reference types="Cypress" />
 
 describe('intercept petstore with cypress', () => {
-  // mocking with dynamic fixture (create own data from json file)
   it('test api with simple intercept stubbing', () => {
     cy.visit('https://petstore.swagger.io')
-    cy.intercept('GET', '**/pet/findByStatus*').as('pet') // give nickname (alias)
+    cy.intercept('GET', '**/pet/findByStatus*', { status: 'available' }).as(
+      'pet'
+    )
 
-    // when /posts link gets clicked, posts api is getting called
+    // when execute link gets clicked, pet api is getting called
     cy.get("[id='operations-pet-findPetsByStatus']").click()
     cy.get('button[class="btn try-out__btn"').click()
     cy.get('option[value="available"').click()
