@@ -8,12 +8,14 @@ describe('intercept petstore with cypress', () => {
     cy.get("[id='operations-pet-findPetsByStatus']").click()
     cy.get('button[class="btn try-out__btn"').click()
     cy.get('td[class="parameters-col_description"] select').select('available')
-    cy.intercept('GET', '/v2/pet/findByStatus*', { status: 'available' }).as(
-      'pet'
-    )
+    cy.intercept('GET', '/v2/pet/findByStatus?status=available').as('pet')
     cy.get('button[class="btn execute opblock-control__btn"').click()
 
     // spy
-    cy.wait('@pet')
+    cy.wait('@pet').then((interception) => {
+      // log response data
+      cy.log(JSON.stringify(interception))
+      console.log(JSON.stringify(interception))
+    })
   })
 })
