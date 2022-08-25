@@ -14,8 +14,8 @@ describe('intercept petstore with cypress', () => {
     // spy
     cy.wait('@pet').then((interception) => {
       // log response data
-      cy.log(JSON.stringify(interception))
-      console.log(JSON.stringify(interception))
+      cy.log(JSON.stringify(interception.response.body))
+      console.log(JSON.stringify(interception.response.body))
     })
   })
 
@@ -29,8 +29,8 @@ describe('intercept petstore with cypress', () => {
 
     cy.wait('@pet').then((interception) => {
       // log response data
-      cy.log(JSON.stringify(interception))
-      console.log(JSON.stringify(interception))
+      cy.log(JSON.stringify(interception.response.body))
+      console.log(JSON.stringify(interception.response.body))
     })
   })
 })
