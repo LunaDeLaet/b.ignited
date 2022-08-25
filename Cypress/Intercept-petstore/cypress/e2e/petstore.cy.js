@@ -7,7 +7,7 @@ describe('intercept petstore with cypress', () => {
     // when execute link gets clicked, pet api is getting called
     cy.get("[id='operations-pet-findPetsByStatus']").click()
     cy.get('button[class="btn try-out__btn"').click()
-    cy.get('option[value="available"').click()
+    cy.get('td[class="parameters-col_description"] select').select('available')
     cy.intercept('GET', '/v2/pet/findByStatus*', { status: 'available' }).as(
       'pet'
     )
