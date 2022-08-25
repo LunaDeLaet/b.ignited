@@ -3,9 +3,7 @@
 describe('intercept petstore with cypress', () => {
   it('test api with simple intercept stubbing', () => {
     cy.visit('https://petstore.swagger.io')
-    cy.intercept('GET', '**/pet/findByStatus*', { status: 'available' }).as(
-      'pet'
-    )
+    cy.intercept('GET', '/pet/findByStatus', { status: 'available' }).as('pet')
 
     // when execute link gets clicked, pet api is getting called
     cy.get("[id='operations-pet-findPetsByStatus']").click()
