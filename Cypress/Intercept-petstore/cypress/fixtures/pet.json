@@ -2,17 +2,17 @@
     "id": 0,
     "category": {
       "id": 0,
-      "name": "dog"
+      "name": "string"
     },
-    "name": "Otto",
+    "name": "doggie",
     "photoUrls": [
       "string"
     ],
     "tags": [
       {
         "id": 0,
-        "name": "puppy"
+        "name": "string"
       }
     ],
-    "status": "sold"
+    "status": "available"
   }

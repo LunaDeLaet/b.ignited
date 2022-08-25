@@ -18,25 +18,25 @@ describe('intercept petstore with cypress', () => {
       console.log(interception)
     })
 
-    // validate response in ui to contain text "name": "Guru"
+    // validate response in ui to contain text "name": "fish"
     cy.get('code[class="language-json"]')
       .eq(0)
       .invoke('text')
-      .should('contain', '"name": "Guru"')
+      .should('contain', '"name": "fish"')
   })
 
-  it('mocking with intercept test with dynamic fixture', () => {
+  it.only('mocking with intercept test with dynamic fixture', () => {
     cy.visit('https://petstore.swagger.io')
     cy.get("[id='operations-pet-addPet']").click()
     cy.get('button[class="btn try-out__btn"').click()
-    cy.intercept('POST', '/v2/pet', { fixture: 'pet.json' }).as('pet')
+    cy.intercept('POST', '/v2/pet', { fixture: 'Otto.json' }).as('pet')
     cy.get('button[class="btn execute opblock-control__btn"').click()
 
     cy.wait('@pet').then((interception) => {
       // log response data
-      cy.log(JSON.stringify(interception.response.body))
+      cy.log(interception.response.body)
       console.log(interception)
-      // validate response
+      // validate response in interception
       expect(interception.response.body).to.have.all.keys(
         'category',
         'id',
@@ -45,6 +45,8 @@ describe('intercept petstore with cypress', () => {
         'status',
         'tags'
       )
+      // validate response with fixture
+      cy.fixture('Otto.json').should('deep.equal', interception.response.body)
     })
   })
 })

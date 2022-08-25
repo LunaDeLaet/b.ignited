@@ -1,18 +1,18 @@
 {
-    "id": 3223,
+    "id": 0,
     "category": {
-      "id": 222,
-      "name": "kitten"
+      "id": 0,
+      "name": "dog"
     },
-    "name": "Luci",
+    "name": "Otto",
     "photoUrls": [
       "string"
     ],
     "tags": [
       {
         "id": 0,
-        "name": "string"
+        "name": "puppy"
       }
     ],
-    "status": "available"
+    "status": "sold"
   }
