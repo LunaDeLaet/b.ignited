@@ -18,4 +18,15 @@ describe('intercept petstore with cypress', () => {
       console.log(JSON.stringify(interception))
     })
   })
+
+  it('mocking with intercept test with dynamic fixture', () => {
+    cy.visit('https://petstore.swagger.io')
+    // when execute link gets clicked, pet api is getting called
+    cy.get("[id='operations-pet-addPet']").click()
+    cy.get('button[class="btn try-out__btn"').click()
+    cy.intercept('POST', '/v2/pet', { fixture: 'pet.json' }).as('pet')
+    cy.get('button[class="btn execute opblock-control__btn"').click()
+
+    cy.wait('@pet')
+  })
 })
