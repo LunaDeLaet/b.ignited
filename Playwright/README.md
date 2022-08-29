@@ -17,7 +17,7 @@ https://playwright.dev/docs/intro
 Install Playwright
 3. Select "Test: Install Playwright" and Choose the browsers you would like to run your tests on. You can also choose if you would like to have a GitHub Actions setup to run your tests on CI.
 
-## How to run test:
+## How to run the example test:
 
 ### npx
 1. npx playwright test
