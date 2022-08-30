@@ -23,3 +23,10 @@ This folder contains the following (in chronological order):
 8. Appium
 
     - tweakers.js: project 'cypress-tweakers' reproduced in Appium (using Android 12 emulator) to introduce me to Appium
+
+9. DemoQA: test 'Practice Form' from demoqa.com in every testing framework that I am familiar with:
+
+    - Appium - DemoQA
+    - Cypress - DemoQA
+    - Playwright - DemoQA
+    - Selenium - DemoQA
