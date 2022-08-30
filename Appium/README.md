@@ -15,7 +15,7 @@ These extend the regular old Selenium clients with additional functionality.
 https://appium.io/docs/en/about-appium/appium-clients/index.html
 
 ## How to Start Appium
-1. in terminal: appium
+1. in terminal: appium --allow-insecure chromedriver_autodownload
 
 ## How to Run Your First Test
 Here, we use:
