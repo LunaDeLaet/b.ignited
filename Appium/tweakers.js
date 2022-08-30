@@ -1,5 +1,4 @@
 const wdio = require('webdriverio')
-const { By } = require('selenium-webdriver')
 const assert = require('assert')
 const { default: $ } = require('webdriverio/build/commands/browser/$')
 
