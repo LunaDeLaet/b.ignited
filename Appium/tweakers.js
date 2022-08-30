@@ -25,6 +25,7 @@ async function main() {
     "(//table[contains(@class, 'headlines')])[2]//td[contains(@class, 'title')]//a"
   )
 
+  // click
   await browser.execute('arguments[0].click();', element)
 
   // logs author name
