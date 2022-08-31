@@ -32,12 +32,17 @@ async function main() {
   await inputFirstName.type('De Laet')
 
   //locate gender female radio button
-  genderFemale = await browser.$()
+  genderFemale = await browser.$("//label[@for='gender-radio-2']")
   // click
-
+  await genderFemale.click()
   // locate mobile number input
-
+  userNumber = await browser.$("//input[@id='userNumber']")
   // send keys
+  await userNumber.type('0467039777')
+
+  //  submit
+  submit = await browser.$("//button[@id='submit']")
+  await browser.execute('arguments[0].click();', submit)
 
   await browser.deleteSession()
 }
