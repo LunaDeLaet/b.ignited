@@ -4,10 +4,9 @@ import { FormsPage } from '../pages/forms.page'
 
 
 test("test practice form", async ({ page }) => {
-    const homePage = new HomePage(page)
+    await page.goto("https://demoqa.com")
 
-    // open url demoqa.com
-    await homePage.goto()
+    const homePage = new HomePage(page)
 
     // scroll to forms card
     await homePage.formsCard.scrollIntoViewIfNeeded()
@@ -36,7 +35,5 @@ test("test practice form", async ({ page }) => {
     await formsPage.userNumber.type('0467039774')
 
     //submit form
-    await formsPage.submit.scrollIntoViewIfNeeded()
-    await formsPage.submit.click()
-
+    await formsPage.submit.evaluate((node: HTMLElement) => { node.click() })
 });

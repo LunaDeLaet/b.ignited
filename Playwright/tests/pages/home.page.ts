@@ -9,7 +9,4 @@ export class HomePage {
         this.formsCard = page.locator('.top-card').nth(1)
     }
 
-    async goto() {
-        await this.page.goto('https://demoqa.com')
-    }
 }
