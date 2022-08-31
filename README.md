@@ -29,4 +29,5 @@ This folder contains the following (in chronological order):
     - Appium - DemoQA
     - Cypress - DemoQA
     - Playwright - DemoQA
+    - WebDriverIO - DemoQA
     - Selenium - DemoQA
