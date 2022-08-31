@@ -10,7 +10,7 @@ class HomePage extends Page {
 
   // locate Forms card
   get formsCard() {
-    return $("(//(div[@class, 'card'])[2]")
+    return $("(//div[contains(@class, 'top-card')])[2]")
   }
 }
 
