@@ -9,10 +9,10 @@ test("yesterday's last article author name and date not empty", async ({ page })
 
     // locate author name and check if exists
     const authorName = page.locator('.name')
-    await expect(authorName).toHaveCount(0)
+    await expect(authorName).not.toBeEmpty()
 
     // locate publish date and check if exists
-    const date = page.locator('.articleMeta[text="-202"]')
-    await expect(date).toHaveCount(0)
+    const date = page.locator('.articleMeta')
+    await expect(date).not.toBeEmpty()
 
 });
