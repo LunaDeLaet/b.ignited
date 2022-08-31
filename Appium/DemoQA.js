@@ -16,13 +16,14 @@ const opts = {
 
 async function main() {
   const browser = await wdio.remote(opts)
-
-  // type into a text field and check that the correct text was entered
+  // visit url
   await browser.url('https://demoqa.com/')
 
+  // click forms
   formsPage = await browser.$("(//div[contains(@class, 'top-card')])[2]")
   await browser.execute('arguments[0].click();', formsPage)
 
+  // click practice form
   practiceForm = await browser.$('.text=Practice Form')
   await browser.execute('arguments[0].click();', practiceForm)
 
